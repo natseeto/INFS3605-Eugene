@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+
 public class MainActivity extends AppCompatActivity {
     // test commit henry
+    //ikimasuka?
+    //ya wae no build wtf
     
     
     // Implement Firebase logins + put in basic UI per BPMN - start connecting APIs
