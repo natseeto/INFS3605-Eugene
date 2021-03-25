@@ -6,9 +6,7 @@ import android.os.Bundle;
 
 
 public class MainActivity extends AppCompatActivity {
-    // test commit henry
-    //ikimasuka?
-    //ya wae no build wtf
+    // omg it works ok finally fml wtf that was so ugh
     
     
     // Implement Firebase logins + put in basic UI per BPMN - start connecting APIs
