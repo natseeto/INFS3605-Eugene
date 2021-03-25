@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.INFS3605">
+        <activity android:name=".CamActivity"></activity>
+        <activity android:name=".BotActivity" />
+        <activity android:name=".ExploreActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
