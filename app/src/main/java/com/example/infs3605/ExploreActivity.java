@@ -7,6 +7,9 @@ import android.os.Bundle;
 
 public class ExploreActivity extends AppCompatActivity {
 
+    //connect in RSS feed per BPMN
+    //recyclerview
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

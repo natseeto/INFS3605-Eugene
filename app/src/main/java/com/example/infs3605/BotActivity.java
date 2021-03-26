@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 public class BotActivity extends AppCompatActivity {
 
+    //Justin to put bot stuff here
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
