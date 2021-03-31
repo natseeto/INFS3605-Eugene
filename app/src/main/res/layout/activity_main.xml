@@ -7,41 +7,31 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/xCam"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <ImageView
         android:id="@+id/xBot"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginLeft="155dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginRight="156dp"
-        android:layout_marginBottom="80dp"
         app:layout_constraintBottom_toTopOf="@+id/xExplore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_search" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_robot" />
 
     <ImageView
         android:id="@+id/xExplore"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="80dp"
         app:layout_constraintBottom_toTopOf="@+id/xCam"
-        app:layout_constraintEnd_toEndOf="@+id/xBot"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/xBot"
-        app:srcCompat="@android:drawable/ic_input_get" />
-
-    <ImageView
-        android:id="@+id/xCam"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginLeft="155dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginRight="156dp"
-        android:layout_marginBottom="141dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
+        app:srcCompat="@android:drawable/ic_input_get" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

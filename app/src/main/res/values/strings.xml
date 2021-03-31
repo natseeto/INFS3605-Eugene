@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">INFS3605</string>
+    <string name="menu_refresh">Refresh</string>
 </resources>

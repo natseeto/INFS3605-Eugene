@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--IBM chatbot api-->
+    <string name="assistant_id">7916d4b4-e2da-449b-8f26-f5ed07240271</string>
+    <string name="assistant_apikey">lHyLc0seAAmnYG7-YPZSJgRQ6uPSSon-bax8a7JNGnbJ</string>
+    <string name="assistant_url">https://api.au-syd.assistant.watson.cloud.ibm.com/instances/8bb4f00f-f5b4-45d3-9823-db1e1bdf1ae5</string>
+
+    <!--IBM speech to text api-->
+    <string name="STT_apikey">_tWywW6Fhl45GoPqZj8WfZfOXfmjoHJFdC19WU6AoPEy</string>
+    <string name="STT_url">https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/5f0557c5-0342-40a1-a9b7-ad3f4bdc8a40</string>
+
+    <!--IBM text to speech api-->
+    <string name="TTS_apikey">M5I7_fU0tII9gFE-4npnFTlD5647IyxocI0iZqS2Kk7b</string>
+    <string name="TTS_url">https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/300a6fed-08be-4cca-955b-35c3867cf19e</string>
+
+</resources>
