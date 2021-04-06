@@ -1,4 +1,27 @@
 <resources>
     <string name="app_name">INFS3605</string>
     <string name="menu_refresh">Refresh</string>
+
+    <string-array name="titles">
+        <item>Malware</item>
+        <item>Phishing</item>
+        <item>Spear Phishing</item>
+        <item>Man in the Middle</item>
+        <item>Trojans</item>
+        <item>Ransomware</item>
+        <item>DDoS</item>
+        <item>Password Safety</item>
+    </string-array>
+
+    <string-array name="desc">
+        <item>Software that performs a malicious task</item>
+        <item>Email trick to disclose confidential information</item>
+        <item>Impersonating a trusted firgure</item>
+        <item>Intercept and change messages</item>
+        <item>Enters a system looking like one thing, does another</item>
+        <item>Encrypting data and demanding a ransom to unencrypt</item>
+        <item>Distributed Denial of Service attack to crash systems</item>
+        <item>Make it more difficult to b e hacked</item>
+
+    </string-array>
 </resources>
