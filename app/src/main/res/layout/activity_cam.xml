@@ -5,15 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CamActivity">
+
     <TextView
-        android:id="@+id/camera"
+        android:id="@+id/tvCamAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginLeft="81dp"
-        android:layout_marginTop="104dp"
-        android:text="camera"
+        android:text="Upload Now!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.757" />
+
+    <ImageView
+        android:id="@+id/ivCamImage"
+        android:layout_width="289dp"
+        android:layout_height="448dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCamAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13"
+        app:srcCompat="@drawable/upload_image" />
+
+    <Button
+        android:id="@+id/btCamRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCamAnswer"
+        app:layout_constraintVertical_bias="0.468" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

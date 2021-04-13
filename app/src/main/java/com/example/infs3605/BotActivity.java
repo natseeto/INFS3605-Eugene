@@ -38,7 +38,7 @@ import java.util.List;
 public class BotActivity extends AppCompatActivity {
 
     /////////////////////////////////////
-    // Bot main activity
+    // Bot activity
     /////////////////////////////////////
 
 
