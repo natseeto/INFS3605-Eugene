@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExploreDetail">
+    tools:context=".ExploreDetail"
+    android:background="@drawable/background_article">
 
     <ImageView
         android:id="@+id/mImg"

@@ -7,12 +7,13 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".BotActivity"
-    tools:showIn="@layout/activity_bot">
+    tools:showIn="@layout/activity_bot"
+    android:background="@drawable/background_chatbot">
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_chatbot"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:scrollbars="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -20,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"/>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -28,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/white"
+        android:background="#83F6E7B5"
         android:orientation="horizontal"
         android:weightSum="4"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="0dp"
             android:layout_weight="3"
             android:background="@null"
@@ -53,6 +55,7 @@
             android:id="@+id/bt_send"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="@null"

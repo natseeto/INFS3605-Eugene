@@ -4,42 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background_home">
+
 
     <ImageView
-        android:id="@+id/xCam"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/ivMain_Cam"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/xExplore"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
+        app:layout_constraintTop_toBottomOf="@+id/ivMain_Explore"
+        app:srcCompat="@drawable/home_cam" />
 
     <ImageView
-        android:id="@+id/xBot"
+        android:id="@+id/ivMain_Bot"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/xExplore"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivMain_Explore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.276"
-        app:srcCompat="@drawable/icon_robot" />
+        app:srcCompat="@drawable/home_chatbot" />
 
     <ImageView
-        android:id="@+id/xExplore"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/ivMain_Explore"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/xCam"
+        app:layout_constraintBottom_toTopOf="@+id/ivMain_Cam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/xBot"
-        app:srcCompat="@android:drawable/ic_input_get" />
+        app:layout_constraintTop_toBottomOf="@+id/ivMain_Bot"
+        app:srcCompat="@drawable/home_article" />
+
+    <TextView
+        android:id="@+id/tvMain_Bot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ask me for anything"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMain_Bot" />
+
+    <TextView
+        android:id="@+id/tvMain_Explore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curious about more?"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMain_Explore" />
+
+    <TextView
+        android:id="@+id/tvMain_Cam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is this a scam?"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMain_Cam" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

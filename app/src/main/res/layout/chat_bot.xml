@@ -9,7 +9,8 @@
         android:id="@+id/cb_avatar"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/icon_robot" />
 
     <TextView
@@ -17,16 +18,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:autoLink="web"
-        android:fontFamily="sans-serif"
-        android:background="@color/bubble_bot"
-        android:textColor="@android:color/black"
-        android:textIsSelectable="true"
-        android:textSize="14sp" />
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:text="Testing TextTesting TextTesting TextTesting TextTesting TextTesting TextTesting Text\nTesting Text\nTesting Text"
+        android:textIsSelectable="true"/>
 
 
 

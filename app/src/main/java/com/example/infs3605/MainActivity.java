@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        xBot = findViewById(R.id.xBot);
-        xExplore = findViewById(R.id.xExplore);
-        xCam = findViewById(R.id.xCam);
+        xBot = findViewById(R.id.ivMain_Bot);
+        xExplore = findViewById(R.id.ivMain_Explore);
+        xCam = findViewById(R.id.ivMain_Cam);
 
         xBot.setOnClickListener(new View.OnClickListener() {
             @Override

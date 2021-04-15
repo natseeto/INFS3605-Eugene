@@ -168,7 +168,8 @@ public class CamActivity extends AppCompatActivity {
         String result = POSSIBLY;
         // get text
         String emailText = answerText.getText().toString();;
-        String[] emailWords = emailText.split("\\s+");
+        // remove non-letter characters, punctuations
+        String[] emailWords = emailText.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
         ArrayList<String> scamTerms = getScamTerms();
 
         // match
@@ -181,7 +182,7 @@ public class CamActivity extends AppCompatActivity {
 
         if(count <= 0) result = UNLIKELY;
         else if(count <= 1) result = POSSIBLY;
-        else if(count <= 2) result = LIKELY;
+        else if(count >= 2) result = LIKELY;
         return result;
     }
 
@@ -209,12 +210,13 @@ public class CamActivity extends AppCompatActivity {
         scamTerms.add("delivery");
         scamTerms.add("ticket");
         scamTerms.add("link");
+        scamTerms.add("website");
         scamTerms.add("follow");
+        scamTerms.add("click");
         scamTerms.add("restricted");
         scamTerms.add("restrict");
         scamTerms.add("continue");
         scamTerms.add("vulnerability");
-        scamTerms.add("click");
         scamTerms.add("hours");
         scamTerms.add("disabled");
         scamTerms.add("disable");

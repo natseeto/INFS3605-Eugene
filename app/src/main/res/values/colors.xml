@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bubble_user">#2196F3</color>
     <color name="bubble_bot">#2F00BCD4</color>
+    <color name="main">#E3C35C</color>
+    <color name="main2">#EDDA99</color>
+    <color name="button">#E3C35C</color>
 </resources>
