@@ -11,8 +11,6 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!--<uses-permission android:name="android.permission.CAMERA" />   causes error???
-    https://stackoverflow.com/questions/43042725/revoked-permission-android-permission-camera/51992542-->
 
     <application
         android:allowBackup="true"
@@ -21,10 +19,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.INFS3605">
-        <activity android:name=".ExploreDetail"
-            android:parentActivityName=".ExploreActivity"
-        android:label="Details"
-        />
+        <activity android:name=".LikelihoodActivity"></activity>
+        <activity
+            android:name=".ExploreDetail"
+            android:label="Details"
+            android:parentActivityName=".ExploreActivity" />
         <activity android:name=".CamActivity" />
         <activity android:name=".BotActivity" />
         <activity android:name=".ExploreActivity" />

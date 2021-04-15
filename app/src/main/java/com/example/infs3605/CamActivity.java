@@ -20,6 +20,9 @@ import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /*
 https://stackoverflow.com/questions/35476182/updating-google-play-services-in-emulator
@@ -37,6 +40,10 @@ public class CamActivity extends AppCompatActivity {
     ImageView exampleEmail;
     TextView answerText;
     Button recButton;
+    static final String UNLIKELY = "UNLIKELY";
+    static final String POSSIBLY = "POSSIBLY";
+    static final String LIKELY = "LIKELY";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +53,6 @@ public class CamActivity extends AppCompatActivity {
         exampleEmail = findViewById(R.id.ivCamImage);
         answerText = findViewById(R.id.tvCamAnswer);
         recButton = findViewById(R.id.btCamRec);
-
 
 
         exampleEmail.setOnClickListener(new View.OnClickListener() {
@@ -60,9 +66,17 @@ public class CamActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rec();
+                launchLikelihoodActivity(analysisLikelihood());
             }
         });
     }
+
+    private void launchLikelihoodActivity(String message) {
+        Intent intent = new Intent(this, LikelihoodActivity.class);
+        intent.putExtra(LikelihoodActivity.INTENT_MESSAGE, message);
+        startActivity(intent);
+    }
+
 
 
     // Upload image
@@ -93,6 +107,7 @@ public class CamActivity extends AppCompatActivity {
         builder.show();
     }
 
+    // Display image
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -145,4 +160,73 @@ public class CamActivity extends AppCompatActivity {
 
         answerText.setText(stringBuilder);
     }
+
+
+
+    // Analysis likelihood
+    public String analysisLikelihood(){
+        String result = POSSIBLY;
+        // get text
+        String emailText = answerText.getText().toString();;
+        String[] emailWords = emailText.split("\\s+");
+        ArrayList<String> scamTerms = getScamTerms();
+
+        // match
+        int count = 0;
+        for(String ew: emailWords){
+            for(String st: scamTerms){
+                if(ew.toLowerCase().equals(st.toLowerCase())) count++;
+            }
+        }
+
+        if(count <= 0) result = UNLIKELY;
+        else if(count <= 1) result = POSSIBLY;
+        else if(count <= 2) result = LIKELY;
+        return result;
+    }
+
+
+
+    // Get common scam terms
+    public ArrayList<String> getScamTerms(){
+        ArrayList<String> scamTerms = new ArrayList<String>();
+        scamTerms.add("label");
+        scamTerms.add("invoice");
+        scamTerms.add("post");
+        scamTerms.add("document");
+        scamTerms.add("postal");
+        scamTerms.add("calculations");
+        scamTerms.add("copy");
+        scamTerms.add("fedex");
+        scamTerms.add("statement");
+        scamTerms.add("financial");
+        scamTerms.add("dhl");
+        scamTerms.add("usps");
+        scamTerms.add("notification");
+        scamTerms.add("irs");
+        scamTerms.add("ups");
+        scamTerms.add("no");
+        scamTerms.add("delivery");
+        scamTerms.add("ticket");
+        scamTerms.add("link");
+        scamTerms.add("follow");
+        scamTerms.add("restricted");
+        scamTerms.add("restrict");
+        scamTerms.add("continue");
+        scamTerms.add("vulnerability");
+        scamTerms.add("click");
+        scamTerms.add("hours");
+        scamTerms.add("disabled");
+        scamTerms.add("disable");
+        scamTerms.add("update");
+        scamTerms.add("check");
+        scamTerms.add("refund");
+        scamTerms.add("account");
+        scamTerms.add("important");
+        return scamTerms;
+    }
+
+
+
+
 }
