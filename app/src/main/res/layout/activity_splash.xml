@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
-        android:text="APP NAME"
+        android:text="Eugene"
         android:textColor="@color/black"
         android:textSize="36sp"
         android:textStyle="bold"
