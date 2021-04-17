@@ -39,17 +39,17 @@ public class LikelihoodActivity extends AppCompatActivity {
 
         switch (likelihoodResult) {
             case UNLIKELY:
-                tvLikelihood.setText("This email is unlikely to be a scam\nHowever, I suggest you to read more about phishing");
+                tvLikelihood.setText("This email is unlikely to be a scam\nHowever, it's always good to learn more");
                 ivLikelihood.setImageResource(R.drawable.result_unlikely);
                 break;
 
             case POSSIBLY:
-                tvLikelihood.setText("Be careful.\nThis email can possibly be a scam");
+                tvLikelihood.setText("Be careful.\nThis email can possibly be a scam\nWant to learn more?");
                 ivLikelihood.setImageResource(R.drawable.result_possibly);
                 break;
 
             case LIKELY:
-                tvLikelihood.setText("Be careful!\nThis email is likely to be a scam!");
+                tvLikelihood.setText("Be careful!\nThis email is likely to be a scam!\nWant to learn more?");
                 ivLikelihood.setImageResource(R.drawable.result_likely);
                 break;
         }

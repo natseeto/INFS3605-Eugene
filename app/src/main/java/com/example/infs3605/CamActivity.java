@@ -229,7 +229,5 @@ public class CamActivity extends AppCompatActivity {
         return scamTerms;
     }
 
-
-
-
+    
 }

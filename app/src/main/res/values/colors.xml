@@ -11,5 +11,6 @@
     <color name="bubble_bot">#2F00BCD4</color>
     <color name="main">#E3C35C</color>
     <color name="main2">#EDDA99</color>
+    <color name="card_view">#6BFFF0BC</color>
     <color name="button">#E3C35C</color>
 </resources>
