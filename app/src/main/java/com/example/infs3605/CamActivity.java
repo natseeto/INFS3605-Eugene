@@ -167,7 +167,8 @@ public class CamActivity extends AppCompatActivity {
     public String analysisLikelihood(){
         String result = POSSIBLY;
         // get text
-        String emailText = answerText.getText().toString();;
+        String emailText = answerText.getText().toString();
+        answerText.setText("Here, you can upload a photo of your email\nThen I will tell you if it's a scam");
         // remove non-letter characters, punctuations
         String[] emailWords = emailText.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
         ArrayList<String> scamTerms = getScamTerms();
