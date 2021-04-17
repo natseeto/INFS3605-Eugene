@@ -24,8 +24,8 @@ public class ExploreActivity extends AppCompatActivity {
     private static final String BASE_URL = "https://krebsonsecurity.com/";
 
     RecyclerView recyclerView;
-    String s1[], s2[];
-    int images[] = {R.drawable.malware, R.drawable.phishing, R.drawable.spear_phishing,R.drawable.mitm, R.drawable.trojan,R.drawable.ransomware,R.drawable.ddos,R.drawable.password};
+    String s1[], s2[], s3[];
+    int images[] = {R.drawable.one, R.drawable.two, R.drawable.three,R.drawable.four, R.drawable.fice,R.drawable.six,R.drawable.seven,R.drawable.password};
 
 
 
@@ -37,6 +37,8 @@ public class ExploreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explore);
+
+        setTitle("Article Feed");
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -61,11 +63,13 @@ public class ExploreActivity extends AppCompatActivity {
         });
 
         s1 = getResources().getStringArray(R.array.titles);
-        s2 = getResources().getStringArray(R.array.desc);
+        s3 = getResources().getStringArray(R.array.creator);
+        s2 = getResources().getStringArray(R.array.pubDate);
+
 
         recyclerView = findViewById(R.id.recyclerView);
 
-       ExploreAdapter exploreAdapter = new ExploreAdapter(this, s1, s2, images);
+       ExploreAdapter exploreAdapter = new ExploreAdapter(this, s1, s2, s3, images);
         recyclerView.setAdapter(exploreAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

@@ -3,25 +3,49 @@
     <string name="menu_refresh">Refresh</string>
 
     <string-array name="titles">
-        <item>Malware</item>
-        <item>Phishing</item>
-        <item>Spear Phishing</item>
-        <item>Man in the Middle</item>
-        <item>Trojans</item>
-        <item>Ransomware</item>
-        <item>DDoS</item>
-        <item>Password Safety</item>
+        <item>Did Someone at the Commerce Dept. Find a SolarWinds Backdoor in Aug. 2020?</item>
+        <item>Microsoft Patch Tuesday, April 2021 Edition</item>
+        <item>ParkMobile Breach Exposes License Plate Data, Mobile Numbers of 21M Users</item>
+        <item>Are You One of the 533M People Who Got Facebooked?</item>
+        <item>Ransom Gangs Emailing Victim Customers for Leverage</item>
+        <item>Ubiquiti All But Confirms Breach Response Iniquity</item>
+        <item>How to Avoid Phishing Emails and Scams</item>
+        <item>Whistleblower: Ubiquiti Breach &#8220;Catastrophic&#8221;</item>
     </string-array>
 
     <string-array name="desc">
-        <item>Software that performs a malicious task</item>
-        <item>Email trick to disclose confidential information</item>
-        <item>Impersonating a trusted firgure</item>
+        <item>On Aug. 13, 2020, someone uploaded a suspected malicious file to VirusTotal, a service that scans submitted files against more than five dozen antivirus and security products. Last month, Microsoft and FireEye identified that file as a newly-discovered fourth malware backdoor used in the sprawling SolarWinds supply chain hack. An analysis of the malicious file and other submissions by the same VirusTotal user suggest the account that initially flagged the backdoor as suspicious belongs to IT personnel at the National Telecommunications and Information Administration (NTIA), a division of the U.S. Commerce Department that handles telecommunications and Internet policy.</item>
+        <item>Microsoft today released updates to plug at least 110 security holes in it\'s Window</item>
+        <item>Someone is selling account information for 21 million customers of ParkMobile, a mobile parking app thats popular in North America. The stolen data includes customer email addresses, phone numbers, license plate numbers, hashed passwords and mailing addresses.</item>
         <item>Intercept and change messages</item>
         <item>Enters a system looking like one thing, does another</item>
         <item>Encrypting data and demanding a ransom to unencrypt</item>
-        <item>Distributed Denial of Service attack to crash systems</item>
+        <item>It\'s a bigger threat than ever, but don\’t worry. There are plenty of ways to defend yourself.</item>
         <item>Make it harder to be hacked</item>
+
+    </string-array>
+
+    <string-array name="pubDate">
+        <item>April 16, 2021</item>
+        <item>April 13, 2021</item>
+        <item>April 12, 2021</item>
+        <item>April 6, 2021</item>
+        <item>April 5, 2021</item>
+        <item>March 30, 2021</item>
+        <item>February 16, 2021</item>
+        <item>February 10, 2021</item>
+
+    </string-array>
+
+    <string-array name="creator">
+        <item>Brian Krebs</item>
+        <item>Brian Krebs</item>
+        <item>Brian Krebs</item>
+        <item>Brian Krebs</item>
+        <item>Brian Krebs</item>
+        <item>Brian Krebs</item>
+        <item>Lily Hay Newman</item>
+        <item>Brian Krebs</item>
 
     </string-array>
 </resources>

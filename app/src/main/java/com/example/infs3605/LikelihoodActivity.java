@@ -1,11 +1,13 @@
 package com.example.infs3605;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +17,7 @@ public class LikelihoodActivity extends AppCompatActivity {
 
     TextView tvLikelihood;
     ImageView ivLikelihood;
+    ConstraintLayout cardLayout;
     static final String UNLIKELY = "UNLIKELY";
     static final String POSSIBLY = "POSSIBLY";
     static final String LIKELY = "LIKELY";
@@ -31,6 +34,8 @@ public class LikelihoodActivity extends AppCompatActivity {
 
         tvLikelihood = findViewById(R.id.tvLikResult);
         ivLikelihood = findViewById(R.id.ivLikResult);
+        cardLayout = findViewById(R.id.cardLayout);
+
 
         switch (likelihoodResult) {
             case UNLIKELY:
@@ -48,6 +53,14 @@ public class LikelihoodActivity extends AppCompatActivity {
                 ivLikelihood.setImageResource(R.drawable.result_likely);
                 break;
         }
+
+        cardLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wired.com/2017/03/phishing-scams-fool-even-tech-nerds-heres-avoid/"));
+                startActivity(intent);
+            }
+        });
     }
 
 }

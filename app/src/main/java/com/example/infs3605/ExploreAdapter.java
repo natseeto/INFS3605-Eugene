@@ -14,13 +14,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class ExploreAdapter extends RecyclerView.Adapter<ExploreAdapter.MyViewHolder> {
 
-    String data1[], data2[];
+    String data1[], data2[], data3[], data4[];
     int images[];
     Context context;
-    public ExploreAdapter(Context ct, String s1[], String s2[], int img[]) {
+    public ExploreAdapter(Context ct, String s1[], String s2[], String s3[], int img[]) {
         context = ct;
         data1 = s1;
         data2 = s2;
+        data3 = s3;
+        //data4 = s4;
         images = img;
 
     }
@@ -36,6 +38,8 @@ public class ExploreAdapter extends RecyclerView.Adapter<ExploreAdapter.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.eTitle.setText(data1[position]);
         holder.eDesc.setText(data2[position]);
+        holder.eCreator.setText(data3[position]);
+      //  holder.ePubDate.setText(data4[position]);
         holder.imageView.setImageResource(images[position]);
 
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
@@ -57,14 +61,15 @@ public class ExploreAdapter extends RecyclerView.Adapter<ExploreAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView eTitle, eDesc;
+        TextView eTitle, eDesc, eCreator;
         ImageView imageView;
         ConstraintLayout mainLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             eTitle = itemView.findViewById(R.id.eTitle);
-            eDesc = itemView.findViewById(R.id.eDesc);
+            eDesc = itemView.findViewById(R.id.ePubDate);
+            eCreator = itemView.findViewById(R.id.eCreator);
            imageView = itemView.findViewById(R.id.imageView);
            mainLayout = itemView.findViewById(R.id.mainLayout);
 
