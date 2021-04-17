@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExploreDetail"
-    android:background="@drawable/background_article">
+    android:background="@drawable/background_article"
+    tools:context=".ExploreDetail">
 
     <ImageView
         android:id="@+id/mImg"
@@ -13,30 +13,38 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.274"
         app:srcCompat="@drawable/ddos" />
 
     <TextView
         android:id="@+id/mTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mImg" />
+        tools:layout_editor_absoluteY="91dp" />
 
     <TextView
         android:id="@+id/mDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <TextView
+        android:id="@+id/mPubDate"
+        android:layout_width="299dp"
+        android:layout_height="371dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/mImg" />
 </androidx.constraintlayout.widget.ConstraintLayout>
