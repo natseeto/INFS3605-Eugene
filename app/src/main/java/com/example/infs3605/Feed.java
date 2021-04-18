@@ -13,12 +13,6 @@ public class Feed  implements Serializable {
     @Element(name = "title")
     private String title;
 
-    @Element(name = "link")
-    private String link;
-
-    @Element(name = "language")
-    private String language;
-
     @ElementList(inline = true, name = "item")
     private List<Entry> entrys;
 
@@ -28,23 +22,6 @@ public class Feed  implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getLink() {
-        return link;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
-    }
-
-
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
     }
 
     public List<Entry> getEntrys() {

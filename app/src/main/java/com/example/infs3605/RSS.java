@@ -7,14 +7,15 @@ import java.io.Serializable;
 
 @Root(name = "rss", strict = false)
 public class RSS implements Serializable {
-    @Element(name = "channel")
-    private String channel;
 
-    public String getChannel() {
+    @Element(name = "channel")
+    public Feed channel;
+
+    public Feed getChannel() {
         return channel;
     }
 
-    public void setChannel(String channel) {
+    public void setChannel(Feed channel) {
         this.channel = channel;
     }
 

@@ -5,8 +5,8 @@ import retrofit2.http.GET;
 
 public interface FeedAPI {
 
-    String BASE_URL = "https://krebsonsecurity.com/";
+    String BASE_URL = "https://www.wired.com/";
 
-    @GET("feed/")
+    @GET("feed/category/security/latest/rss")
     Call<RSS> getFeed();
 }
