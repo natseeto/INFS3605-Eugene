@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.sun.jna.StringArray;
@@ -27,7 +29,6 @@ public class ExploreActivity extends AppCompatActivity {
     private static final String BASE_URL = "https://www.wired.com/";
 
     RecyclerView recyclerView;
-    String s1[], s2[], s3[];
     int images[] = {R.drawable.one, R.drawable.two, R.drawable.three,R.drawable.four, R.drawable.fice,R.drawable.six,R.drawable.seven,R.drawable.password};
 
     @Override
@@ -37,15 +38,16 @@ public class ExploreActivity extends AppCompatActivity {
 
         setTitle("Article Feed");
 
-        s3 = getResources().getStringArray(R.array.creator);
-        s2 = getResources().getStringArray(R.array.pubDate);
-
-
         recyclerView = findViewById(R.id.recyclerView);
+//        ExploreAdapterOop.RecyclerViewClickListener listener = new ExploreAdapterOop.RecyclerViewClickListener() {
+//            @Override
+//            public void onClick(View view, Integer mId) {
+//                Intent intent = new Intent(ExploreActivity.this, ExploreDetail.class);
+//                startActivity(intent);
+//            }
+//        };
+//        mAdapter = new ExploreActivityOop(new ArrayList<Post>(), listener);
 
-        ExploreAdapter exploreAdapter = new ExploreAdapter(this, s1, s2, s3, images);
-        recyclerView.setAdapter(exploreAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -63,11 +65,6 @@ public class ExploreActivity extends AppCompatActivity {
 
                 List<Entry> entrys = response.body().getChannel().getEntrys();
 
-                Log.d(TAG, "onResponse: title" +entrys.get(0).getTitle());
-                Log.d(TAG, "onResponse: creator" +entrys.get(0).getCreator());
-                Log.d(TAG, "onResponse: thumbnail"+entrys.get(0).getThumbnail().getUrl());
-
-
                 ArrayList<Post> posts = new ArrayList<Post>();
                 for (int j=0; j<entrys.size(); j++){
                     posts.add(new Post(
@@ -79,12 +76,24 @@ public class ExploreActivity extends AppCompatActivity {
                             entrys.get(j).getDescription()
                     ));
                 }
-
-                for (int x = 0; x < entrys.size(); x++) {
-                    s1[x] = entrys.get(x).getTitle();
-                }
+//                ArrayList<String> s1 = new ArrayList<String>();
+//                for (int x = 0; x < entrys.size(); x++) {
+//                    s1.add(entrys.get(x).getTitle());
+//                }
+               ArrayList<String> sTitle = new ArrayList<String>();
+                ArrayList<String> sCreator = new ArrayList<String>();
+                ArrayList<String> sPubDate = new ArrayList<String>();
+                ArrayList<String> sLink = new ArrayList<String>();
+                ArrayList<String> sDesc = new ArrayList<String>();
+                ArrayList<String> sThumb = new ArrayList<String>();
 
                 for (int i =0; i< entrys.size(); i++){
+                    sTitle.add(entrys.get(i).getTitle());
+                    sCreator.add(entrys.get(i).getCreator());
+                    sPubDate.add(entrys.get(i).getPubDate().substring(0, 16));
+                    sLink.add(entrys.get(i).getLink());
+                    sDesc.add(entrys.get(i).getDescription());
+                    sThumb.add(entrys.get(i).getThumbnail().getUrl());
                     Log.d(TAG, "onResponse: \n "+
                             "Title: " +entrys.get(i).getTitle() + "\n" +
                             "Creator: " +entrys.get(i).getCreator() + "\n" +
@@ -93,6 +102,27 @@ public class ExploreActivity extends AppCompatActivity {
                             "Desc: " +entrys.get(i).getDescription() + "\n" +
                             "Thumbnail: " +entrys.get(i).getThumbnail().getUrl() + "\n");
                 }
+                String[] s1 = new String[sTitle.size()];
+                s1 = sTitle.toArray(s1);
+                String[] s2 = new String[sCreator.size()];
+                s2 = sCreator.toArray(s2);
+                String[] s3 = new String[sPubDate.size()];
+                s3 = sPubDate.toArray(s3);
+                String[] s4 = new String[sLink.size()];
+                s4 = sLink.toArray(s4);
+                String[] s5 = new String[sDesc.size()];
+                s5 = sDesc.toArray(s5);
+                String[] s6 = new String[sThumb.size()];
+                s6 = sThumb.toArray(s6);
+
+//                ListView listView = (ListView) findViewById(R.id.recyclerView);
+//                ExploreAdapterOop exploreAdapterOop = new ExploreAdapterOop(ExploreActivity.this, R.layout.explore_row, posts);
+//                listView.setAdapter(exploreAdapterOop);
+
+
+                ExploreAdapter exploreAdapter = new ExploreAdapter(ExploreActivity.this, s1, s2, s3, s4, s5, s6);
+                recyclerView.setAdapter(exploreAdapter);
+                recyclerView.setLayoutManager(new LinearLayoutManager(ExploreActivity.this));
             }
 
             @Override
