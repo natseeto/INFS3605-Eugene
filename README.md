@@ -10,7 +10,7 @@ COLLABORATORS
 
 Eugene was created for the purpose of assisting senior citizens in the area of cybersecurity.
 
-This is a project in collaboration with the Australian Red Cross and the University of New South Wales Business School, under the INFS3605 Sandbox Education Program.
+This is a project in collaboration with the Australian Red Cross and the University of New South Wales Business School, under the INFS3605 Sandbox Education Program (T1 2021).
 
 
  
